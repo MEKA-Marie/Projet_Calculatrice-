@@ -1,8 +1,20 @@
+"""
+Module pour l'interface graphique de la calculatrice.
+
+Ce module crée et gère l'interface utilisateur avec les boutons de la calculatrice.
+"""
+
 import customtkinter as ctk
 import calculator_backend as backend
 
 
 def cliquer(valeur):
+    """
+    Gère les clics sur les boutons de la calculatrice.
+
+    Paramètres :
+        valeur (str) : Le chiffre ou l'opérateur cliqué.
+    """
     if valeur == "CE":
         backend.effacer()
     elif valeur == "=":
@@ -18,6 +30,9 @@ def cliquer(valeur):
 
 
 def demarrer_interface():
+    """
+    Crée et démarre l'interface graphique de la calculatrice avec les boutons.
+    """
     ctk.set_appearance_mode("dark")
     ctk.set_default_color_theme("blue")
 
